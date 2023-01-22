@@ -1,0 +1,21 @@
+﻿@model WebApplication1.ViewModels.EditUserVM
+
+<form method="post" asp-controller="Users" asp-action="EditUser">
+    <div class="container">
+        <h1>EditUser</h1>
+        <hr>
+
+        <label asp-for="Name"><b>Name</b></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger"><</span>
+
+        <label asp-for="Email"><b>Email</b></label>
+        <input asp-for="Email" class="form-control">
+        <span asp-validation-for="Email" class="text-danger"><</span>
+       
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a asp-controller="Users" asp-action="ViewUser" class="btn btn-secondary">
+        Back
+        </a>
+    </div>
+</form> 

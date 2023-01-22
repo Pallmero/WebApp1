@@ -1,0 +1,21 @@
+﻿@model WebApplication1.Models.User
+<form method="post" asp-controller="Users" asp-action="DeletePOST">
+   <input asp-for="Id" hidden/>
+    <div class="container">
+        <h1>DeleteUser</h1>
+        <hr>
+
+        <label asp-for="Name"><b>Name</b></label>
+        <input asp-for="Name" disabled class="form-control">
+        
+
+        <label asp-for="Email"><b>Email</b></label>
+        <input asp-for="Email" disabled class="form-control">
+    
+       
+        <button type="submit" class="btn btn-primary">Delete</button>
+        <a asp-controller="Users" asp-action="ViewUser" class="btn btn-secondary">
+        Back
+        </a>
+    </div>
+</form> 

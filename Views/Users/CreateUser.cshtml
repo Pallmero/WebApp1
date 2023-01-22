@@ -1,0 +1,23 @@
+﻿@model WebApplication1.ViewModels.CreateUserVM
+
+<form method="post" asp-controller="Users" asp-action="CreateUser">
+    <div class="container">
+        <h1>CreateUser</h1>
+        <hr>
+
+        <label asp-for="Name"><b>Name</b></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger" required></span>
+        <br />
+
+        <label asp-for="Email"><b>Email</b></label>
+        <input asp-for="Email" class="form-control">
+        <span asp-validation-for="Email" class="text-danger" required></span>
+        <br />
+       
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-controller="Users" asp-action="ViewUser" class="btn btn-secondary">
+        Back
+        </a>
+    </div>
+</form> 
